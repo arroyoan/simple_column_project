@@ -1,0 +1,117 @@
+:root {
+  --brt-orange-card: hsl(31, 77%, 52%);
+  --drk-cyan-card: hsl(184, 100%, 22%);
+  --xdrk-cyan-card: hsl(179, 100%, 13%);
+
+  --trnsp-white: hsla(0, 0%, 100%, 0.75);
+  --v-lgt-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--v-lgt-gray) !important;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 60px 0px;
+}
+
+.card {
+  padding: 20px 20px;
+  max-width: 175px;
+  height: 330px;
+  position: relative;
+}
+
+.card:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.card:last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card__header {
+  font-family: "Big Shoulders Display", cursive !important;
+  color: var(--v-lgt-gray);
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.card__body {
+  font-family: "Lexend Deca", sans-serif !important;
+  color: var(--trnsp-white);
+  font-size: 14px;
+  width: 90%;
+}
+
+.card__footer {
+  position: absolute;
+  bottom: 0%;
+  padding-bottom: 35px;
+}
+
+.card__footer button {
+  border: none;
+  font-family: "Lexend Deca", sans-serif !important;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.card__footer button:focus {
+  outline: none;
+}
+.card__footer button:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.orange {
+  background-color: var(--brt-orange-card);
+}
+.cyan {
+  background-color: var(--drk-cyan-card);
+}
+.darkcyan {
+  background-color: var(--xdrk-cyan-card);
+}
+
+.button_orange {
+  color: var(--brt-orange-card);
+}
+.button_cyan {
+  color: var(--drk-cyan-card);
+}
+.button_dark_cyan {
+  color: var(--xdrk-cyan-card);
+}
+
+@media (min-width: 769px) {
+  section {
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+  }
+  .card {
+    height: 400px;
+    width: 200px;
+    padding: 20px 40px;
+  }
+  .card:first-child {
+    border-radius: 10px 0px 0px 10px;
+  }
+  .card:last-child {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .card__footer {
+    padding-bottom: 55px;
+  }
+}
